@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.2;
+    }
+
+    .w3-bar .w3-button {
+        padding: 17px;
+    }
+</style>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar  w3-card " id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide w3-hover-teal font-effect-shadow-multiple">G-10</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small ">
+                <a *ngIf="local.get('user') != null"  class="w3-bar-item w3-button w3-hover-teal" routerLink="profile" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person " viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                
+                    {{getUser()}}
+                </a>
+                <a id ="login"*ngIf="local.get('user') == null"  class="w3-bar-item w3-button w3-hover-teal"  routerLink="signin" routerLinkActive="active">Login</a>
+                <a *ngIf="local.get('user') != null"  class="w3-bar-item w3-button w3-hover-teal" routerLink="" routerLinkActive="active" (click)="logout()" >Logout</a>
+                <a  class="w3-bar-item w3-button w3-hover-teal" routerLink="cart" routerLinkActive="active"><i class="fa fa-shopping-cart"> <span class="badge w3-text-orange"></span></i></a>
+                   
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+<br />
+<br />
+<br />

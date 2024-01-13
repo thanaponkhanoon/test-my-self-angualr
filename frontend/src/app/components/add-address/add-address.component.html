@@ -1,0 +1,102 @@
+<app-sidebar></app-sidebar>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&family=Teko&display=swap" rel="stylesheet">
+    <div>
+    <div class="card-body" id="address">
+        <h4 class="card-title">Add Adders</h4>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <form [formGroup]="addressForm">
+                    <div class="card" >
+                        <div id="open" class="card-header" >
+                            Address Form
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                
+                            </div>
+                        
+                            <div class="row">
+                                <div id="error" class="col-md-3">
+                                    Firstname:
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                      <input id="error" type="text" class="form-control" placeholder="{{address[0].firstname}}" formControlName='firstname'>
+                                      <div *ngIf="(fromdata.firstname.dirty || fromdata.firstname.touched)" id="sign">
+                                        <div *ngIf="fromdata.firstname.errors?.required" class="alert alert-danger">
+                                          firstname is required
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="error" class="col-md-3">
+                                    Lastname:
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                      <input id="error" type="text" class="form-control" placeholder="{{address[0].lastname}}"formControlName='lastname'>
+                                      <div *ngIf="(fromdata.lastname.dirty || fromdata.lastname.touched)" id="sign">
+                                        <div *ngIf="fromdata.lastname.errors?.required" class="alert alert-danger">
+                                            lastname is required
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="error" class="col-md-3">
+                                    Phonenumber:
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                      <input id="error" type="text" class="form-control" placeholder="{{address[0].phonenumber}}" formControlName='phonenumber'>
+                                      <div *ngIf="(fromdata.phonenumber.dirty || fromdata.phonenumber.touched)" id="sign">
+                                        <div *ngIf="fromdata.phonenumber.errors?.required" class="alert alert-danger">
+                                          phonenumber is required
+                                        </div>
+                                        <div *ngIf="fromdata.phonenumber.errors?.pattern" class="alert alert-danger">
+                                            phonenumber is match pattern , Example 0XXXXXXXXX
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="error0" class="col-md-3">
+                                    Address detail:
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <br>
+                                    <textarea id="error" class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="{{address[0].address}}" formControlName='address'></textarea>
+                                    <div *ngIf="(fromdata.address.dirty || fromdata.address.touched)" id="sign">
+                                        <div *ngIf="fromdata.address.errors?.required" class="alert alert-danger">
+                                          address is required
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11"></div>
+                                <div class="col-md-1">
+                                    <button type="button" class="btn btn-primary" (click)="putData()" id="accept">Add</button>&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8">
+            </div>
+        </div>
+    </div>
+</div>
+

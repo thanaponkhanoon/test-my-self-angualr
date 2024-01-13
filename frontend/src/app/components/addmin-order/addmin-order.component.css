@@ -1,0 +1,21 @@
+#popup{
+    margin-right: 10px;
+    background-color: rgb(4, 105, 105);
+    color: rgb(255, 253, 253);
+}
+#open{
+    background-color: rgb(4, 105, 105);
+    color: rgb(255, 253, 253);
+}
+#accept{
+    margin-right: 5px;
+}
+#adorder{
+    margin-top: 30px;
+}
+.container-fluid{margin-left: 110px;}
+
+#aad{
+    font-family: 'Athiti', sans-serif;
+    font-size: 16px;
+}

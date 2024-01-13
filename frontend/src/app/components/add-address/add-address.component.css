@@ -1,0 +1,19 @@
+#error{
+    margin-top: 5px;
+    
+}
+#error0{
+    margin-top: 30px;
+}
+#bt{
+float: right;
+}
+#address{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    
+}
+#open{
+    background-color: rgb(77, 126, 133);
+    color: aliceblue;
+}

@@ -1,0 +1,47 @@
+<app-sidebar></app-sidebar>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@300;400&display=swap" rel="stylesheet">
+<div class="container-fluid">
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>My Cart</h2>
+        <div class="table-responsive-md">  
+        <table class="table table-striped table-inverse">
+            <thead class="thead-inverse">
+                <tr id="aad">
+                    <th>No.</th>
+                    <th>ชื่อสินค้า</th>
+                    <th>ประเภท</th>
+                    <th>ราคา</th>
+                    <th>จำนวน</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of carts; index as i" id="aad">
+                    <td scope="row">{{i+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.quantity}} </td>      
+                    <td><button id = "button"type="button" id= "bt" class="btn btn-danger" (click)="deleteProduct(item._id)">ลบ</button></td>      
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div>
+    <div class="row" id="aad">
+        <div class="col-md-8"></div>
+        <div class="col-md-2">
+            <p *ngIf ="getlengthCart()>0" id="price">ราคารวม: {{calculate()}}</p>
+        </div>
+        <div class="col-md-2">
+            <button *ngIf ="getlengthCart()>0" type="button"  class="btn btn-primary" (click)="buy()">สั่งซื้อ</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+#cancle{
+    margin-left: 5px;
+    float: right;
+    background-color: rgb(187, 64, 7);
+    color: aliceblue;
+}
+#accept{ 
+    float: right;
+    background-color: rgb(1, 19, 15);
+    color: aliceblue;
+}
+.row{
+    margin-top: 5px;
+}
+
+.card-header{
+    background-color: rgb(77, 126, 133);
+    color: aliceblue;
+}
+#addproduct{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    
+}
+#aad{
+    font-family: 'Athiti', sans-serif;
+    font-size: 16px;
+   
+}

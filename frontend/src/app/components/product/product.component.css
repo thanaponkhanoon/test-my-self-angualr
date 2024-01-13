@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@600&family=Pattaya&display=swap');
+
+.abc {
+    font-family: 'Barlow Condensed', serif;
+    font-size: 18px;
+  }
+#aac{
+    font-family: 'Bangers', cursive;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 90px;
+}
+#aad{
+    font-family: 'Athiti', sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+}
+#aaa{
+    font-family: 'Athiti', sans-serif;
+    font-family: 'Pattaya', sans-serif;
+    unicode-range: U+0E00–U+0E7F;
+    font-size: 20px;
+}
+#foot{
+    font-family: 'Bangers', cursive;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+}
+#open{
+    background-color: rgb(77, 126, 133);
+    color: aliceblue;
+}
+
